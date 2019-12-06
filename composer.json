@@ -1,0 +1,16 @@
+{
+    "name": "danishigor/time-token",
+    "description": "Time token manager.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Igor Danish",
+            "email": "danish_igor@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DanishIgor\\TimeToken\\": "src"
+        }
+    }
+}
