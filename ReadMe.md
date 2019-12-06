@@ -6,10 +6,10 @@ Temporary tokens are often used in links to confirm E-mail and other actions.
 ```php
 <?php
 
-use DanishIgor\TimeToken\Token;
+use DanishIgor\TimeToken\TokenManager;
 
 // Create TimeToken object.
-$tokenManager = new Token();
+$tokenManager = new TokenManager();
 
 // Generate token.
 $token = $tokenManager->generate(); // "c4NUUjEFp5eUZO9GyIdo_4204983745".
@@ -28,13 +28,13 @@ you can specify the lifetime, length and set of characters from which a random s
 ```php
 <?php
 
-use DanishIgor\TimeToken\Token;
+use DanishIgor\TimeToken\TokenManager;
 
 // Create TimeToken object with non-standard parameters.
 // Life time: 600 seconds.
 // Length token: 100 characters.
 // Characters for generation: 1, 2, 3, "a", "c", "x".
-$tokenManager = new Token(600, 100, [1, 2, 3, "a", "c", "x"]);
+$tokenManager = new TokenManager(600, 100, [1, 2, 3, "a", "c", "x"]);
 
 // Generate token.
 $token = $tokenManager->generate(); // "1c2axx1x2_1575630395".

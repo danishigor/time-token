@@ -7,7 +7,7 @@ namespace DanishIgor\TimeToken;
  *
  * @package DanishIgor\TimeToken
  */
-class Token
+class TokenManager
 {
     /**
      * @var integer $lifetime Token lifetime in seconds.
