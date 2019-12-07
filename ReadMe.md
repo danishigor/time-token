@@ -1,7 +1,22 @@
 TimeToken
------------------------
+===
 
 Temporary tokens are often used in links to confirm E-mail and other actions.
+
+Install
+---
+
+The preferred way to install this extension is composer.
+You can download composer from the official website: "http://getcomposer.org/download/".
+
+To connect the library to the project, use:
+> composer require danishigor/time-token
+
+or add this line to the "require" section of your composer.json:
+> "danishigor/time-token": "dev-master"
+
+Examples
+---
 
 ```php
 <?php
