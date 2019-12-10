@@ -39,28 +39,28 @@ class TokenManager
     )
     {
         if (!is_integer($lifetime)) {
-            throw new \Exception('The value of "$lifetime" is not an integer.');
+            throw new \InvalidArgumentException('The value of "$lifetime" is not an integer.');
         }
 
         if (!is_integer($length)) {
-            throw new \Exception('The value of "$length" is not an integer.');
+            throw new \InvalidArgumentException('The value of "$length" is not an integer.');
         }
 
         if (!is_array($characters)) {
-            throw new \Exception('The value of "$characters" is not an array.');
+            throw new \InvalidArgumentException('The value of "$characters" is not an array.');
         }
 
         if ($lifetime < 1) {
-            throw new \Exception('Life time is too short.');
+            throw new \RangeException('Life time is too short.');
         }
 
         // The minimum length must consist of one or more random characters, a lower slash, and a timestamp.
         if ($length < 2 + strlen(time())) {
-            throw new \Exception('The specified length is too short.');
+            throw new \RangeException('The specified length is too short.');
         }
 
         if (count($characters) < 1) {
-            throw new \Exception('The array of characters to generate is empty.');
+            throw new \RangeException('The array of characters to generate is empty.');
         }
 
         $this->lifetime = $lifetime;
