@@ -28,8 +28,6 @@ class TokenManager
      * @param integer $lifetime   Token lifetime in seconds.
      * @param integer $length     Length of the token along with the timestamp.
      * @param array   $characters Symbols from which the token is generated.
-     *
-     * @throws \Exception
      */
     public function __construct(
         $lifetime = 3600,
