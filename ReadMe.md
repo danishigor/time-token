@@ -13,7 +13,7 @@ To connect the library to the project, use:
 > composer require danishigor/time-token
 
 or add this line to the "require" section of your composer.json:
-> "danishigor/time-token": "dev-master"
+> "danishigor/time-token": "@stable"
 
 Examples
 ---
